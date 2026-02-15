@@ -1,0 +1,3 @@
+Sungai :
+1st project java, change the entity form erd to class and method on java.
+hofully it works :)
