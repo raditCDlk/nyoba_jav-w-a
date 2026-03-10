@@ -1,39 +1,43 @@
-public class Sungai{ //class yg dipilih
-    int id;
-    String nama_sungai, lokasi, status;
 
-    //membuat set- method
-    public void setnama(String nama_sungai){
-        this.nama_sungai = nama_sungai;
-    }
-    public void setStatus(String status){
-        this.status = status;
-    }
-    public void getId(int id){
+public class Sungai { // parent class
+
+    public int id;
+    public String nama_sungai, lokasi;
+
+    public void setId(int id) {
         this.id = id;
-    }
-    public void setLokasi(String lokasi){
-       this.lokasi = lokasi;
+        System.out.println("Id Sungai : " + id);
     }
 
-    //method buat tampil data set-
-    public void showdata(){
-        System.out.println("nama sungai : "+nama_sungai);
-        System.out.println("ID sungai : "+id);
-        System.out.println("lokasi sungai : "+lokasi);
-        System.out.println("status sungai : "+status);
+    public void setNama(String nama_sungai) {
+        this.nama_sungai = nama_sungai;
+        System.out.println("Nama Sungai : " + nama_sungai);
     }
-    
-    //panggil method untun di run
-    public static void main (String[]args){
+
+    public void setLokasi(String lokasi) {
+        this.lokasi = lokasi;
+        System.out.println("Lokasi Sungai : " + lokasi);
+    }
+
+    public void getkategori(String kategori) {
+    }
+
+    public void getStatus(String status) {
+    }
+
+    public static void main(String[] args) {
         Sungai sungaiobj = new Sungai();
-
-        sungaiobj.setnama("citarum");
-        sungaiobj.setLokasi("jawa Barat");
-        sungaiobj.getId(1);
-        sungaiobj.setStatus("BERSIH");
-        sungaiobj.showdata();
         
+        sungaiobj.setId(1);
+        sungaiobj.setNama("citarum");
+        sungaiobj.setLokasi("jawa Barat");
+
+        KategoriSungai kategoriSungai = new KategoriSungai();
+
+        kategoriSungai.setKategori("layak pakai");
+
+        StatusSungai statusSungai = new StatusSungai();
+
+        statusSungai.setStatus("sungai Bersih");
     }
-    
 }
